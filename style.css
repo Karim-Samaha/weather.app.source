@@ -1,0 +1,114 @@
+html {
+    overflow: hidden;
+}
+body {
+    background-size: 100% 100%;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+
+.appContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 50px auto;
+    width: 40%;
+    max-height: 70%;
+    background-color: #000000d9;
+    border-radius: 20px;
+}
+.appContainer h1, .appContainer h2 {
+    color: white;
+}
+
+.searchForm  {
+    width: 90%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+ 
+}
+.searchForm input{
+    height: 50px;
+    padding: 0 40px;
+    border-radius: 10px;
+    border: none;
+    font-size: 25px;
+    background-color: #f3e9e933;
+    color:silver ;
+}
+.searchForm input:focus {
+    outline: none;
+}
+.searchForm .searchIcon {
+    margin-left: 20px;
+    padding: 6px 6px;
+    background-color: #f3e9e933;
+    border-radius: 50%;
+    left: 88%;
+    top: 1%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+
+}
+.searchForm .searchIcon:hover {
+    background-color: white;
+}
+.weatherInfo {
+    width: 90%;
+    max-height: 70%;
+
+}
+.weatherInfo .cityInfo {
+    display: flex;
+    align-items: center;
+}
+.weatherInfo .cityName {
+    font-size: 30px;
+    font-style: italic;
+}
+.weatherInfo .cityTemp {
+    font-size: 50px;
+    margin: 0;
+    font-weight: 900;
+    font-style: italic;
+}
+.weatherInfo .humidity, .weatherInfo .windSpeed {
+    font-size: 16px;
+    letter-spacing: 3px;
+}
+.weatherInfo.loading {
+    visibility: hidden ;
+    max-height: 20px;
+    position: relative;
+}
+.weatherInfo.loading:after {
+    visibility: visible;
+    content: "Loading...";
+    font-size: 20px;
+    position: absolute;
+    top:0;
+    color: white;
+}
+@media (max-width: 500px) {
+    body {
+        background-size: cover
+    }
+    .appContainer {
+        width: 100%;
+        max-height: 100%;
+    }
+    .searchForm  {
+        width: 100%;
+    }
+    .searchForm input{
+        padding: 0 0px;
+    }
+    .searchForm .searchIcon {
+        margin-left: 0px;
+        padding: 4px 4px;
+    }
+}
